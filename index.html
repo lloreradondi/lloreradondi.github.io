@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dondi Llorera</title>
+  <meta name="description" content="Personal site of Dondi Llorera — developer and builder of small, useful tools." />
+  <link rel="canonical" href="https://lloreradondi.github.io/" />
+  <meta property="og:title" content="Dondi Llorera" />
+  <meta property="og:description" content="Developer and builder of small, useful tools." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lloreradondi.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #171a21;
+      --text: #e8eaed;
+      --muted: #9aa0a6;
+      --accent: #6ea8fe;
+      --border: #272b33;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, #1b2030 0%, var(--bg) 60%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .wrap { width: 100%; max-width: 640px; text-align: center; }
+    .avatar {
+      width: 88px; height: 88px; border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 40px;
+      background: linear-gradient(135deg, var(--accent), #a06eff);
+      box-shadow: 0 10px 30px rgba(110,168,254,.25);
+    }
+    h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+    .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 32px; }
+    .links {
+      display: grid; gap: 12px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 480px) {
+      .links { grid-template-columns: 1fr 1fr; }
+    }
+    a.link {
+      display: block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      padding: 16px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    a.link:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      background: #1c212b;
+    }
+    a.link small { display: block; color: var(--muted); font-weight: 400; margin-top: 4px; }
+    footer { margin-top: 40px; color: var(--muted); font-size: .85rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="avatar">⚡</div>
+    <h1>Dondi Llorera</h1>
+    <p class="tagline">Developer &amp; builder of small, useful tools.</p>
+
+    <nav class="links">
+      <a class="link" href="https://github.com/lloreradondi" target="_blank" rel="noopener">
+        GitHub
+        <small>Projects &amp; source code</small>
+      </a>
+      <a class="link" href="mailto:hello@example.com">
+        Email
+        <small>Get in touch</small>
+      </a>
+    </nav>
+
+    <footer>
+      © <span id="year"></span> Dondi Llorera · Built with plain HTML/CSS ·
+      <a href="https://github.com/lloreradondi/lloreradondi.github.io">source</a>
+    </footer>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
